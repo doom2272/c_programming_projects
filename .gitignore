@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+
+# Do NOT ignore your chapter folders (c2, c8, etc.)
+!*/
+
+# Do NOT ignore files with extensions (like 1.c, README.md, .gitignore)
+!*.*
+
+# Standard C temporary files (just in case)
+*.o
+*.obj
