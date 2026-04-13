@@ -14,7 +14,7 @@ int main(void)
 
   printf("Enter the intrest rate: ");
   scanf("%d", &low_rate);
-  printf("Enter thr number of years: ");
+  printf("Enter the number of years: ");
   scanf("%d", &num_years);
 
   printf("\nYears");
