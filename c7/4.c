@@ -12,6 +12,8 @@ int main(void)
   do {
     scanf("%c", &c);
 
+    c = toupper(c);
+
     switch (c) { //when using char type in switch, always put the characters in '' 
       case 'A': case 'B': case 'C': printf("2"); break;
       case 'D': case 'E': case 'F': printf("3"); break;
