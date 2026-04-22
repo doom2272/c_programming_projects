@@ -11,7 +11,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 05: Selection Statements
 - [x] Chapter 06: Loops
 - [x] Chapter 07: Basic Types
-- [ ] Chapter 08: Arrays (In Progress 🛠️)
+- [x] Chapter 08: Arrays
+- [ ] Chapter 09: Functions (In Progress 🛠️)
 
 ## Setup
 - **OS:** Ubuntu 24.04
