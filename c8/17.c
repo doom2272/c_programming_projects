@@ -10,7 +10,7 @@
 int main(void)
 {
 
-  int n, num = 1, row, col, width = 0, c;
+  int n, row, col, current_row, current_col, width = 0, c;
 
   printf("This program creates a magic square of a specified size.\nThe size must be an odd number between 1 and 99.\n");
   printf("Enter size of magic square: ");
@@ -37,31 +37,27 @@ int main(void)
   }
 
   row = 0; col = n / 2; //our starting point is at row 0, in the middle column
-  
+  square[row][col] = 1;
+
+  int num = 2;
+
   while (num <= n * n) { //as long as we dont exceed our square, which is the largest nimber
-    if (square[row][col] == 0){ //enssure we only print if the element is 0, so we don't overwrite already written elements
-      square[row][col] = num; //write the current number in the element
-      row--; //then move one row up
-      col++;// and one column over (to the right)
-      if (row < 0) //wrap aroud if we are over the first row
-        row = n - 1;
-      if (col > n - 1) //wrap around if we are outside the last column
-        col = 0;
+    current_row = row;
+    current_col = col;
+
+    if ((current_row - 1) < 0) row = n - 1;// if our next move is past our before our first row, wrap around
+    else row = current_row - 1; //if its not out of bounds keep moving up a row
+
+    if ((current_col + 1) >= n) col = 0; // if our next move is past our last column, wrap around to the first column
+    else col = current_col + 1; //if not keep moving one column over
+
+    if (square[row][col] == 0) square[row][col] = num++; //if our next move has a zero populate it with a number, then increment num
+    else { // if we already filled the next spot, remain on the same column but move a row down
+      if (current_row + 1 >= n) 
+        square[row = 0][col = current_col] = num++;
+      else 
+        square[row = current_row + 1][col = current_col] = num++;
     }
-    else { //if the element is not a zero, that means we have already written here
-      row = row + 2; //move one row down from our previous row
-      col--;// but at the same cloumn(so we effectively move down one row). we decrement because to move to our previous column we need to undo the increment that moves our column to the next column
-      if (row > n - 1) //wrap around if we move past the last row
-        row = row - n;
-      if (col < 0) //wrap around if we are trying to move to a position before our first column
-        col = col + n;
-      square[row][col] = num; //write our to the current number below the previous postion sice our intended position was already written to
-      row--; //move up a rpw
-      col++; //move to the next column (we are doing this to indentify our next position since we skipped the if statement above that was supposed to update the position for us)
-      if (col > n - 1)
-        col = 0;
-    }
-    num++; //only increment our number if we have already written the current one somewhere
   }
 
   for (int i = 0; i < n; i++) { //prints our magic square
@@ -70,6 +66,5 @@ int main(void)
     }
     putchar('\n');
   }
-
   return 0;
 }
