@@ -12,7 +12,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 06: Loops
 - [x] Chapter 07: Basic Types
 - [x] Chapter 08: Arrays
-- [ ] Chapter 09: Functions (In Progress 🛠️)
+- [x] Chapter 09: Functions
+- [ ] Chapter 10: Program Organization (In Progress 🛠️)
 
 ## Setup
 - **OS:** Ubuntu 24.04
