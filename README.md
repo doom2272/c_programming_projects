@@ -14,8 +14,9 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 08: Arrays
 - [x] Chapter 09: Functions
 - [x] Chapter 10: Program Organization
-- [ ] Chapter 11: Pointers (In Progress 🛠️)
+- [x] Chapter 11: Pointers
+- [ ] Chapter 12: Pointers and Arrays (In Progress 🛠️)
 
 ## Setup
-- **OS:** Ubuntu 24.04
+- **OS:** Fedora Linux 44
 - **Compiler:** GCC
