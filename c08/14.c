@@ -16,8 +16,9 @@ int main(void)
   for (i = 0; i < N; i++) { 
     c = getchar();
 
-    if (c == '.' || c == '?' || c == '!') { // exit loop when we find any of the terminating characters
-      stop = c;
+    if (c == '.' || c == '?' || c == '!' || c == '\n') { // exit loop when we find any of the terminating characters
+      if (c != '\n')
+        stop = c;
       break;
     }
 
@@ -39,8 +40,10 @@ int main(void)
     for (int k = start; k <= end; k++) //prints the complete word
       putchar(sentence[k]);
 
-    if (j > 0) putchar(' '); //inserts a space after each word except the first word
+    if (start > 0) 
+      putchar(' '); //inserts a space after each word except the first word
 
+    
   }
   putchar(stop); // prints the terminating char if there was any, if there was none, automatically prints the ".", which we initiallised stop with at the begining
 
