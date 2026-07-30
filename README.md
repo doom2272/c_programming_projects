@@ -15,7 +15,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 09: Functions
 - [x] Chapter 10: Program Organization
 - [x] Chapter 11: Pointers
-- [ ] Chapter 12: Pointers and Arrays (In Progress 🛠️)
+- [x] Chapter 12: Pointers and Arrays
+- [ ] Chapter 13: Strings (In Progress 🛠️)
 
 ## Setup
 - **OS:** Fedora Linux 44
