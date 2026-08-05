@@ -1,7 +1,7 @@
 
 /*
  * now uses functions.
- * finds anagrams. word that the same letters. eg smartest and mattress\
+ * finds anagrams. words that have the same letters. eg smartest and mattress\
  */
 
 #include <stdbool.h>
@@ -40,12 +40,12 @@ int main(void)
 void read_word(int counts[26])
 {
 
-  char c;
+  int c;
 
   while ((c = getchar()) != '\n') {// reads first word char by char upto newline char
-    c = tolower(c); //converts char to lower
+    c = tolower((unsigned char)c); //converts char to lower
 
-    if (isalpha(c)) counts[c - 'a']++; //if char is a letter, element representing the char in letter[] is incremented
+    if (isalpha((unsigned char)c)) counts[c - 'a']++; //if char is a letter, element representing the char in letter[] is incremented
   }
 
 }

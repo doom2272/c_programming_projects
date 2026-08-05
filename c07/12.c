@@ -13,7 +13,7 @@ the expression is evaluated from left to right (no operator has precedence over 
 int main(void)
 {
   double num = 0.0, total = 0.0;
-  char c;
+  int c;
 
   printf("Enter an expression: ");
   scanf("%lf", &total);

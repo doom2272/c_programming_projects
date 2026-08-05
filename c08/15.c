@@ -8,15 +8,15 @@
 
 int main(void)
 {
-  int shift, i;
-  char mess[N] = {'0'}, c;
+  int shift, i, c;
+  char mess[N] = {'0'};
 
   printf("Enter message to be encrypted: ");
   for (i = 0; i < N; i++) { //store each char in mess[]
     c = getchar();
     if (c == '\n') break; //signifies end of sentence. if not here we would be stuck in a loop
 
-    mess[i] = c;
+    mess[i] = (char)c;
   }
 
   printf("Enter shift ammount (1 - 25): ");

@@ -3,12 +3,12 @@
 
 int main(void)
 {
-  char sentence[N], c;
-  int end = 0;
+  char sentence[N];
+  int end = 0, c;
 
   printf("Enter a message: ");
   for (int i = 0; i < N && (c = getchar()) != '\n'; i++) {
-    sentence[i] = c;
+    sentence[i] = (char)c;
     end = i + 1;
   }
 

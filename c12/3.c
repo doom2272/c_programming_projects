@@ -4,11 +4,12 @@
 
 int main(void)
 {
-  char sentence[N], c, *p = sentence;
+  char sentence[N], *p = sentence;
+  int c;
 
   printf("Enter a message: ");
   for (; p < sentence + N && (c = getchar()) != '\n'; p++) {
-    *p = c;
+    *p = (char)c;
   }
 
   printf("Reversal is: ");

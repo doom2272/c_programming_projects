@@ -62,7 +62,7 @@ int main(void)
 void read_cards(void)
 {
 
-  char c, rank_c, suit_c;
+  int c, rank_c, suit_c;
   bool bad_card;
   int cards_read = 0, rank, suit;
 
@@ -157,7 +157,7 @@ void analyze_hand(void)
   }
 
   //check for flush
-  suit = hand[RANK][SUIT];
+  suit = hand[0][SUIT];
 
   for (rank = 1; rank < NUM_CARDS; rank++) {
     if (hand[rank][SUIT] != suit) {

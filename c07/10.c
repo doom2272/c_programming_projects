@@ -7,13 +7,13 @@ counts the number of vowels in a sentence;
 
 int main(void)
 {
-  int vowels = 0;
-  char c, d;
+  int vowels = 0, c;
+  char d;
 
   printf("Enter a sentence: ");
 
   while ((c = getchar()) != '\n') {
-    d = tolower(c);
+    d = tolower((unsigned char)c);
 
     if (d == 'a' || d == 'e' || d == 'i' || d == 'o' || d == 'u')
       vowels++;

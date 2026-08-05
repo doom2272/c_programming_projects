@@ -25,7 +25,7 @@ void print_digits(void);
 int main(void)
 {
   int position = 0;
-  char c;
+  int c;
 
   clear_digits();
 

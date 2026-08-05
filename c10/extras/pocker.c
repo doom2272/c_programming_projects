@@ -59,7 +59,7 @@ int main(void)
 void read_cards(void)
 {
   bool card_exists[NUM_RANKS][NUM_SUITS];
-  char c, rank_c, suit_c;
+  int c, rank_c, suit_c;
   int rank, suit;
   bool bad_card;
   int cards_read = 0;

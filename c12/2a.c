@@ -5,14 +5,14 @@
 
 int main(void)
 {
-  char message[N], c;
-  int i, end = 0;
+  char message[N];
+  int i, end = 0, c;
   bool is_palindrom = true;
 
   printf("Enter a message: ");
   for (i = 0; i < N && ((c = getchar()) != '\n'); i++) {
-    if (isalpha(c)) { //only populate array if char is a letter
-      message[end] = tolower(c); //tolower other wise A and a would be intepreted as different letters. also we use end because i increments when every char is read. we only want to move through the array when we get a letter.
+    if (isalpha((unsigned char)c)) { //only populate array if char is a letter
+      message[end] = tolower((unsigned char)c); //tolower other wise A and a would be intepreted as different letters. also we use end because i increments when every char is read. we only want to move through the array when we get a letter.
       end++;//tells us the end of our array (which contains only letter)
       }
   }

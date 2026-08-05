@@ -10,7 +10,8 @@
 int main(void)
 {
   char *end, *start;
-  char sentence[N] = {0}, stop = '.', c, *p;
+  char sentence[N] = {0}, stop = '.', *p;
+  int c;
 
   printf("Enter a sentence: ");
 
@@ -19,11 +20,11 @@ int main(void)
 
     if (c == '.' || c == '?' || c == '!' || c == '\n') { 
       if (c != '\n')
-        stop = c;
+        stop = (char)c;
       break;
     }
 
-    *p = c; 
+    *p = (char)c; 
   }
 
   for ( --p; p >= sentence; p--) { 

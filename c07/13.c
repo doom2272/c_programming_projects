@@ -1,5 +1,5 @@
 /*
-calculates the average word lenght for a sentence, displays average to one decimal place
+calculates the average word length for a sentence, displays average to one decimal place
 */
 
 #include <stdio.h>
@@ -7,8 +7,7 @@ calculates the average word lenght for a sentence, displays average to one decim
 int main(void)
 {
   float letter = 0.0f, word = 0.0f;
-  char c;
-  int edge = 0;//flag variable, looks to see whether were in a word or not, to avoid taking the second space after 2 spaces as a word
+  int c, edge = 0;//flag variable, looks to see whether were in a word or not, to avoid taking the second space after 2 spaces as a word
 
   printf("Enter a sentence: ");
 
@@ -24,7 +23,10 @@ int main(void)
     }
   }
 
+  if (word > 0.0f)
   printf("Average word length: %.1f\n", letter / word);
+  else 
+    printf("No words were entered!\n");
 
   return 0;
 }

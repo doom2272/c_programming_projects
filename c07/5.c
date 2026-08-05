@@ -1,21 +1,21 @@
 /*
-program computes the value of a word enterd by user, i.e, SCRABBLE.
-*/
+   program computes the value of a word enterd by user, i.e, SCRABBLE.
+   */
 
 #include <stdio.h>
 #include <ctype.h>
 
 int main(void)
 {
-  char c;
+  int c;
   int face_value = 0;
 
   printf("Enter a word: ");
 
   while ((c = getchar()) != '\n') {
 
-    switch (toupper(c)) {
-      
+    switch (toupper((unsigned char)c)) {
+
       case 'D': case 'G': 
         face_value += 2; break;
 
@@ -27,15 +27,17 @@ int main(void)
 
       case 'K':
         face_value += 5; break;
-      
+
       case 'J': case 'X':
         face_value += 8; break;
-      
+
       case 'Q': case 'Z':
         face_value += 10; break;
 
       default:
-        face_value++; break;
+        if (isalpha((unsigned char)c))
+          face_value++;
+        break;
     }
   }
 

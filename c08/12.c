@@ -7,8 +7,8 @@
 
 int main(void)
 {
-  int total = 0, success = 1;
-  char c, face_value[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10}; // face_value contains the values for each letter. Eg index 0 is letter A which has the value 1
+  int total = 0, success = 1, c;
+  char face_value[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10}; // face_value contains the values for each letter. Eg index 0 is letter A which has the value 1
 
   printf("Enter a word: ");
 

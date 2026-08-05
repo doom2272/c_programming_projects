@@ -16,8 +16,8 @@ int main(void)
 {
   //only " %c" in scanf can skip white space, as far as what we have covered
 
-  int i;
-  char f, Last[N] = {0}, L, c;
+  int i, L, c;
+  char f, Last[N] = {0};
 
   printf("Enter a first and last name: ");
 

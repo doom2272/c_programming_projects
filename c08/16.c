@@ -1,5 +1,5 @@
 /*
- * finds anagrams. word that the same letters. eg smartest and mattress\
+ * finds anagrams. word that the same letters. eg smartest and mattress
  */
 
 #include <stdio.h>
@@ -10,7 +10,7 @@
 int main(void)
 {
   int letter[N] = {0};
-  char c;
+  int c;
 
   printf("Enter the first word: ");
   while ((c = getchar()) != '\n') {// reads first word char by char upto newline char
@@ -21,9 +21,9 @@ int main(void)
 
   printf("Enter the second word: ");
   while ((c = getchar()) != '\n') { //reads the second word
-    c = tolower(c);
+    c = tolower((unsigned char)c);
 
-    if (isalpha(c)) letter[c - 'a']--; //decrements element representing char in letter[],which effectively tells us this letter is the same in both words
+    if (isalpha((unsigned char)c)) letter[c - 'a']--; //decrements element representing char in letter[],which effectively tells us this letter is the same in both words
   }
   putchar('\n');
 

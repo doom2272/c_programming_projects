@@ -8,8 +8,8 @@
 
 int main(void)
 {
-  int i, end, start;
-  char sentence[N] = {0}, stop = '.', c; // i initiallised stop to '.' incase the user forgets to end the sentence with the terminating character
+  int i, end, start, c;
+  char sentence[N] = {0}, stop = '.'; // i initiallised stop to '.' incase the user forgets to end the sentence with the terminating character
 
   printf("Enter a sentence: ");
 
@@ -18,11 +18,11 @@ int main(void)
 
     if (c == '.' || c == '?' || c == '!' || c == '\n') { // exit loop when we find any of the terminating characters
       if (c != '\n')
-        stop = c;
+        stop = (char)c;
       break;
     }
 
-    sentence[i] = c; // otherwise store each char in sentence
+    sentence[i] = (char)c; // otherwise store each char in sentence
   }
 
   for (int j = i - 1; j >= 0; j--) { //searches the user sentence backward

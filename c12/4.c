@@ -7,13 +7,14 @@
 
 int main(void)
 {
-  char message[N], c, *p;
+  char message[N], *p;
   bool is_palindrome = true;
+  int c;
 
   printf("Enter a message: ");
   for (p = message; p < message + N && ((c = getchar()) != '\n');){
-    if (isalpha(c)) {
-      *p++ = tolower(c); //only advance our pointer if we encounter a letter to store in our array.
+    if (isalpha((unsigned char)c)) {
+      *p++ = (char)tolower((unsigned char)c); //only advance our pointer if we encounter a letter to store in our array.
     }
   }
 
