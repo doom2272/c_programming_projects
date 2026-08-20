@@ -1,3 +1,6 @@
+//solves RPN expressions, where operators come after operands. 
+//eg 1 2 3 * + =  is interpreted as 1 + (2 * 3) = 
+//this program expects single digit operands.
 
 #include <ctype.h>
 #include <stdbool.h>

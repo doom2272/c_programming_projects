@@ -12,13 +12,18 @@ int main(void)
   int c;
 
   printf("Enter a message: ");
-  for (p = &message[0]; p < &message[N] && ((c = getchar()) != '\n');){
+  for (p = message; p < message + N && (c = getchar()) != '\n';){
     if (isalpha((unsigned char)c)) {
       *p++ = (char)tolower((unsigned char)c); //only advance our pointer if we encounter a letter to store in our array.
     }
   }
 
-  char *q = &message[0]; // we need this pointer to point at the beginning of our array. since p is already pointing at memory just past the last letter we stored
+  if (p == message) {
+    printf("-- No word entered! --\n");
+    return 1;
+  }
+
+  char *q = message; // we need this pointer to point at the beginning of our array. since p is already pointing at memory just past the last letter we stored
   for (--p; q < p; q++, p--) { //p is decremented immediately because as noted, it's pointing at the address just past the last letter we stored
     if (*q != *p) {
       is_palindrome = false;

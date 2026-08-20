@@ -1,5 +1,5 @@
 /*
- * finds anagrams. word that the same letters. eg smartest and mattress
+ * finds anagrams. word that have the same letters. eg smartest and mattress
  */
 
 #include <stdio.h>
