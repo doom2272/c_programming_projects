@@ -16,7 +16,10 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 10: Program Organization
 - [x] Chapter 11: Pointers
 - [x] Chapter 12: Pointers and Arrays
-- [ ] Chapter 13: Strings (In Progress 🛠️)
+- [x] Chapter 13: Strings
+- [x] Chapter 14: The Preprocessor
+- [x] Chapter 15: Writing Large File Programs
+- [ ] Chapter 16: Structures, Unions and Enumeration (In Progress 🛠️)
 
 ## Setup
 - **OS:** Fedora Linux 44
