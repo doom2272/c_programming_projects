@@ -1,0 +1,5 @@
+The C programming    language provides low-level memory access while maintaining a high abstraction layer. 
+
+Writing text formatters like this one requires a deep, methodical grasp of variables, loops, counters, and mathematical algorithms.
+
+Supercalifragilisticexpialidocious is an exceptionally long word.

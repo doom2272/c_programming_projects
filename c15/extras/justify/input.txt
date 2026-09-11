@@ -1,0 +1,10 @@
+   C     is quirky,  flawed,    and  an
+enormous   success.      Although accidents of   history 
+ surely  helped,   it  eventually   satisfied   a   need a 
+
+    for  a   system   implementation    language    efficient
+ enough     to   displace          assembly       language, 
+   yet  suffienciently    abstract    and fluent       to describe 
+  algorithms      and      interaction      in a      wide   variety 
+of   enviroments.
+                         --      Dennis      M.           Ritchie
