@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include "word.h"
+
+
+int read_char(void)
+{
+  int ch = getchar();
+
+  return (ch == '\n' || ch == '\t') ? ' ': ch;
+}
+
+void read_word(char *word, int len)
+{
+  int ch, pos = 0, word_len;
+
+  //skips all whitespaces.
+  while ((ch = getchar()) != EOF && isspace(ch))
+    ;
+  while (ch != ' ' && ch != EOF) {
+    if (pos < len)
+      word[pos++] = ch;
+    ch = read_char();
+  }
+  word[pos] = '\0';
+  
+  word_len = strlen(word);
+
+  if (word_len > MAX_WORD_LEN)
+    word[MAX_WORD_LEN] = '*';
+
+}
