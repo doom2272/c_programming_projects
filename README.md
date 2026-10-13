@@ -20,7 +20,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 14: The Preprocessor
 - [x] Chapter 15: Writing Large File Programs
 - [x] Chapter 16: Structures, Unions and Enumeration
-- [ ] Chapter 17: Advanced Uses of Pointers (In Progress 🛠️)
+- [x] Chapter 17: Advanced Uses of Pointers
+- [ ] Chapter 18: Declarations (In Progress 🛠️)
 
 ## Setup
 - **OS:** Fedora Linux 44
