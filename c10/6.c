@@ -1,6 +1,6 @@
-//solves RPN expressions, where operators come after operands. 
-//eg 1 2 3 * + =  is interpreted as 1 + (2 * 3) = 
-//this program expects single digit operands.
+// solves RPN expressions, where operators come after operands.
+// eg 1 2 3 * + =  is interpreted as 1 + (2 * 3) =
+// this program expects single digit operands.
 
 #include <ctype.h>
 #include <stdbool.h>
@@ -13,60 +13,38 @@
 int operands[STACK_SIZE];
 int top = 0;
 
-void make_empty(void)
-{
-  top = 0;
-}
+void make_empty(void) { top = 0; }
 
+bool is_empty(void) { return top == 0; }
 
-bool is_empty(void)
-{
-  return top == 0;
-}
+bool is_full(void) { return top == STACK_SIZE; }
 
-
-bool is_full(void)
-{
-  return top == STACK_SIZE;
-}
-
-
-void stack_underflow(void)
-{
+void stack_underflow(void) {
   printf("Not enough operands in expression!!\n");
   exit(EXIT_FAILURE);
 }
 
-
-void stack_overflow(void)
-{
+void stack_overflow(void) {
   printf("Expression is to complex!!!\n");
   exit(EXIT_FAILURE);
 }
 
-
-void push(int i)
-{
+void push(int i) {
   if (is_full())
     stack_overflow();
-  else 
+  else
     operands[top++] = i;
 }
 
-
-int pop(void)
-{
-  if (is_empty()){
+int pop(void) {
+  if (is_empty()) {
     stack_underflow();
     return -1;
-  }
-  else 
+  } else
     return operands[--top];
 }
 
-
-int main(void)
-{
+int main(void) {
 
   int result, operand1, operand2;
   char c;
@@ -75,31 +53,51 @@ int main(void)
   while (1) {
 
     printf("Enter 'q' to exit\nEnter an RPN expression: ");
-    while ( !end && (scanf(" %c", &c)) == 1) {
+    while (!end && (scanf(" %c", &c)) == 1) {
       if (isdigit(c))
         push(c - '0');
-      else 
+      else
         switch (c) {
-          case 'q':
-            exit(EXIT_SUCCESS);
+        case 'q':
+          exit(EXIT_SUCCESS);
 
-          case '*': operand2 = pop(); operand1 = pop(); result = operand1 * operand2; push(result); break;
-          case '/': operand2 = pop(); operand1 = pop(); result = operand1 / operand2; push(result); break;
-          case '+': operand2 = pop(); operand1 = pop(); result = operand1 + operand2; push(result); break;
-          case '-': operand2 = pop(); operand1 = pop(); result = operand1 - operand2; push(result); break;
+        case '*':
+          operand2 = pop();
+          operand1 = pop();
+          result = operand1 * operand2;
+          push(result);
+          break;
+        case '/':
+          operand2 = pop();
+          operand1 = pop();
+          result = operand1 / operand2;
+          push(result);
+          break;
+        case '+':
+          operand2 = pop();
+          operand1 = pop();
+          result = operand1 + operand2;
+          push(result);
+          break;
+        case '-':
+          operand2 = pop();
+          operand1 = pop();
+          result = operand1 - operand2;
+          push(result);
+          break;
 
-          case ' ': ; break;
+        case ' ':;
+          break;
 
-          case '=': 
-                    printf("Value of expression: %d \n", pop());
-                    end = true;
-                    break;
+        case '=':
+          printf("Value of expression: %d \n", pop());
+          end = true;
+          break;
 
-          default:
-                    exit(EXIT_FAILURE); break;
-
+        default:
+          exit(EXIT_FAILURE);
+          break;
         }
-
     }
 
     while (getchar() != '\n')
@@ -109,5 +107,5 @@ int main(void)
     make_empty();
   }
 
-
+  return 0;
 }
