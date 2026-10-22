@@ -75,25 +75,15 @@ PUBLIC Item dequeue(Queue *q) {
   if (is_empty(q))
     er("Error in dequeue: queue is empty.");
 
-  if (q->total == 1) {
-    i = q->last->item;
-
-    struct node *temp = q->last;
-    q->last = NULL;
-    q->first = NULL;
-
-    free(temp);
-    q->total--;
-
-    return i;
-  }
-
   i = q->first->item;
 
   struct node *temp = q->first;
 
   q->first = q->first->next;
   free(temp);
+
+  if (q->first == NULL)
+    q->last = NULL;
 
   q->total--;
   return i;
