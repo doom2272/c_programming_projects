@@ -22,7 +22,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 16: Structures, Unions and Enumeration
 - [x] Chapter 17: Advanced Uses of Pointers
 - [x] Chapter 18: Declarations
-- [ ] Chapter 19: Program Design (In Progress 🛠️)
+- [x] Chapter 19: Program Design
+- [ ] Chapter 20: Low-level Programming (In Progress 🛠️)
 
 ## Setup
 - **OS:** Fedora Linux 44
