@@ -41,7 +41,6 @@ int main(void) {
   // Assign a test pattern to the full 32-bit register
   regs.dword.eax = 0x12345678;
 
-  // Let's verify if the subsets are properly isolated!
   printf("EAX: 0x%08lX\n", regs.dword.eax); // 0x12345678
   printf("AX:  0x%04X\n", regs.word.ax);    // 0x5678 (The lower half)
   printf("AH:  0x%02X\n", regs.byte.ah);    // 0x56   (High byte of AX)
