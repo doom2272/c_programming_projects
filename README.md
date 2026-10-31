@@ -23,7 +23,7 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 17: Advanced Uses of Pointers
 - [x] Chapter 18: Declarations
 - [x] Chapter 19: Program Design
-- [ ] Chapter 20: Low-level Programming (In Progress 🛠️)
+- [x] Chapter 20: Low-level Programming
 
 ## Setup
 - **OS:** Fedora Linux 44
