@@ -24,6 +24,8 @@ This repository contains my solutions to the projects from the book **"C Program
 - [x] Chapter 18: Declarations
 - [x] Chapter 19: Program Design
 - [x] Chapter 20: Low-level Programming
+- [x] Chapter 21: The Standard Library
+- [ ] Chapter 22: Input/Output
 
 ## Setup
 - **OS:** Fedora Linux 44
