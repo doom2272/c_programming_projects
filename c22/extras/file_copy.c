@@ -13,14 +13,13 @@ int main(int argc, char **argv) {
   }
 
   if ((source_fp = fopen(argv[1], "rb")) == NULL) {
-    fprintf(stderr, "Could not open %s", argv[1]);
-    fclose(source_fp);
+    fprintf(stderr, "Could not open %s\n", argv[1]);
     exit(EXIT_FAILURE);
   }
 
   if ((dest_fp = fopen(argv[2], "wb")) == NULL) {
     fprintf(stderr, "Could not open %s\n", argv[2]);
-    fclose(dest_fp);
+    fclose(source_fp);
     exit(EXIT_FAILURE);
   }
 
